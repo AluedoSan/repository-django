@@ -23,8 +23,9 @@ def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
 
-def home(request):
-    return render(request, "polls/home.html")
+def feedBack(request):
+    
+    return render(request, "polls/feedback.html")
 
 
 def redirect_polls(request):
