@@ -51,8 +51,20 @@
     </div>
     <footer>
         <main class="main-footer">
-            <a href="{% url 'polls:feedBack' %}">Enviar feedback</a>
+            <button id="feedbackBtn">Dar FeedBack</button>
+            <div id="feedbackModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Deixe seu feedback</h2>
+                    <form method="POST" action="{% url 'polls:feedBack' %}">
+                        {% csrf_token %}
+                        <textarea style="border: none;" name="feedback" rows="5" placeholder="Escreva seu feedback aqui..."></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </main>
     </footer>
+    <script src="{% static 'polls/js/index.js' %}"></script>
 </body>
 </html>

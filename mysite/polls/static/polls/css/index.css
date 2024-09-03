@@ -109,16 +109,92 @@ footer {
     justify-content: flex-end;
 }
 
-footer a{
+#feedbackBtn{
     color: antiquewhite;
-    text-decoration: none;
     padding-right: 2.5vh;
     background-color: cadetblue;
     margin-right: 4vh;
     padding-left: 2.5vh;
     border-radius: 5px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: large;
 }
-footer a:hover{
+#feedbackBtn:hover{
     color: cadetblue;
     background-color: antiquewhite;
+    cursor: pointer;
+}
+
+/* Estilizando o Modal (Pop-up) */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: solid #000000;
+    border-radius: 10px;
+    width: 50vh;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 0px 20px 8px #64543f;
+}
+
+.modal-content h2 {
+    color: rgb(221, 221, 138);
+    text-shadow: -2px 3px 1.5px black;
+    padding: 1vh;
+}
+
+/* Botão de Fechar */
+.close {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgb(221, 221, 138);
+    text-align: end;
+    margin: -2.6vh;
+    border-radius: 7px;
+    padding-right: 4%;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(160, 30, 30);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Forms do feedback */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form button{
+    color: antiquewhite;
+    padding-right: 2.5vh;
+    background-color: cadetblue;
+    border-radius: 5px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: large;
+}
+
+form button:hover{
+    color: cadetblue;
+    background-color: antiquewhite;
+    cursor: pointer;
 }
