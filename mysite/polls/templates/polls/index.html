@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK DO CSS -->
     <link rel="stylesheet" href="{% static 'polls/css/index.css' %}">
+    <!-- LINK DA FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Home</title>
+    <!-- TÍTULO DO SITE -->
+    <title>{% block title %}Alex The Sander{% endblock %}</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="{% static 'polls/favicon.ico' %}">
 </head>
 <body>
+    {% block content %}
     <!--Div para fazer 1 card-->
     <div class="box-1">
         <main class="main-1">
@@ -49,7 +55,9 @@
             <p class="text_main-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ab autem hic quo quaerat earum facilis numquam pariatur quam aliquid, suscipit distinctio doloribus, praesentium corporis voluptate ex eum omnis repellendus!</p>
         </main>
     </div>
+    {% endblock %}
     <footer>
+        <p>&copy; 2024 - AlexTheSander</p>
         <main class="main-footer">
             <button id="feedbackBtn">Dar FeedBack</button>
             <div id="feedbackModal" class="modal">

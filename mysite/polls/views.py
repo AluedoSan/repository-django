@@ -16,4 +16,4 @@ def feedBack(request):
 
 
 def redirect_polls(request):
-    return redirect(request, 'polls:index')
+    return redirect('polls:index')

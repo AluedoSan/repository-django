@@ -181,12 +181,17 @@ footer {
 /* Forms do feedback */
 form{
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
+.main-footer{
+    margin: auto;
+}
+
 form button{
+    margin-top: 2.5%;
     color: antiquewhite;
-    padding-right: 2.5vh;
     background-color: cadetblue;
     border-radius: 5px;
     font-family: "New Amsterdam", sans-serif;
