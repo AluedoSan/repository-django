@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from .models import Question
 
 
@@ -11,8 +11,9 @@ def index(request):
 def feedBack(request):
     if request.method == 'POST':
         feedback = request.POST.get('feedback')
+        print(feedBack)
         return redirect('polls:index')
-    return render(request, "polls/feedback.html")
+    return redirect('polls:index')
 
 
 def redirect_polls(request):
