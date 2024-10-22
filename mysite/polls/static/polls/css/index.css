@@ -28,6 +28,7 @@ body{
 
 .text_main-1{
     padding: 0px 3% 0px 3%;
+    text-align: justify;
 }
 
 .up_main-1{
@@ -39,7 +40,7 @@ body{
 
 .info-1 h2{
     color: #9af1f1;
-    text-shadow: -2px 3px 1.5px black;
+    text-shadow: -2px 3px 1.5px #395a4e;
     text-align: center;
 }
 
@@ -52,7 +53,18 @@ body{
 .redes a{
     color: #333;
     text-decoration: none;
-    padding: 2%;
+    padding: 1%;
+    border-radius: 7px;
+}
+
+#github_logo:hover{
+    background-color: #000000;
+    color: aliceblue;
+}
+
+#linkedin_logo:hover{
+    background-color: #0e76a8;
+    color: aliceblue;
 }
 
 /*Aqui começa o css do card 2 */
@@ -92,7 +104,7 @@ body{
 
 .info-2 h2{
     color: #9af1d1;
-    text-shadow: -2px 3px 1.5px black;
+    text-shadow: -2px 3px 1.5px #395a4e;
     text-align: center;
 }
 

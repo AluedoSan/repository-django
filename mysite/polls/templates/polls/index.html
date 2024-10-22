@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +39,8 @@
             Pois bem, agradeço por ter lido até aqui, tenha uma boa experiência!
             </p>
             <div class="redes">
-                <a href=""><i class='bx bxl-github'></i>GitHub</a>
-                <a href=""><i class='bx bxl-linkedin-square' ></i>Linkedin</a>
+                <a href="https://github.com/AluedoSan" id="github_logo" target="_blank"><i class='bx bxl-github'></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/alexander-ueno/" id="linkedin_logo" target="_blank"><i class='bx bxl-linkedin-square' ></i>Linkedin</a>
             </div>
         </main>
     </div>
@@ -50,12 +50,15 @@
         <main class="main-2">
             <p class="up_main-2"><i class='bx bxs-circle'></i><i class='bx bxs-circle'></i><i class='bx bxs-circle'></i></p>
             <div class="info-2">
-                <h2>Ju, 18</h2>
+                <h2>Finanças</h2>
             </div>
-            <p class="text_main-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ab autem hic quo quaerat earum facilis numquam pariatur quam aliquid, suscipit distinctio doloribus, praesentium corporis voluptate ex eum omnis repellendus!</p>
+            <p class="text_main-2">Esse projeto está sendo feito para controlar as minhas finanças.</p>
+            <div class="button_finance">
+                <a href="{% url 'polls:finance' %}">Finance</a>
+            </div>
         </main>
     </div>
-    {% endblock %}
+    
     <footer>
         <p>&copy; 2024 - Alexander Ueno</p>
         <main class="main-footer">
@@ -64,7 +67,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Deixe seu feedback</h2>
-                    <form method="POST" enctype="multipart/form-data" action="{% url 'polls:feedBack' %}">
+                    <form method="POST" enctype="multipart/form-data" action="{% url 'polls:index' %}">
                         {% csrf_token %}
                         <textarea style="border: none;" name="feedback" rows="5" placeholder="Escreva seu feedback aqui..."></textarea>
                         <button type="submit">Enviar</button>
@@ -73,6 +76,7 @@
             </div>
         </main>
     </footer>
+    {% endblock %}
     <script src="{% static 'polls/js/index.js' %}"></script>
 </body>
 </html>
